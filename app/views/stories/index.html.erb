@@ -1,0 +1,25 @@
+<h1>Welcome to Rewsly</h1>
+
+<p>
+<%= form_tag '/search', method: :get do %> 
+	<%= label_tag 'q', "Search" %>
+	<%= text_field_tag 'q' %>
+	<%= submit_tag "Search" %>
+<% end %>
+</p>
+<p>
+	<%= link_to 'Add a New Story!', new_story_path %>
+</p>
+
+<p>
+<table>
+	<tr>
+		<th>Stories</th>
+	</tr>
+	<% @stories.each do |story| %>
+		<tr>
+			<td><%= link_to "#{story.title}", story %></td>
+		</tr>
+	<% end %>
+</table>
+</p>

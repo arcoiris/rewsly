@@ -1,0 +1,6 @@
+<% @story.each do |story| %>
+	<p><h3><%= story.title %></h3></p>
+	<p>Category: <%= story.category %></p>
+	<p>Upvotes: <%= story.upvotes %></p>
+	<p><%= link_to 'Original Site', story.link %></p>
+<% end %>
